@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Easy Encryption
+	</title>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/0269448bb4.js"></script>
+	<link rel="stylesheet" type="text/css" href="lib/app.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap" rel="stylesheet">
+	
+		
+
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light">
+	  <a class="navbar-brand" href="#">
+	    <i class="fas fa-crow text-light icon"></i> 
+	    EasyEncryption
+	  </a>
+	  <i class="fab fa-github github"></i>
+	</nav>
+
+	<div class="container">
+		<h1>
+			AES Encryption
+		</h1>
+		<h4>
+			Encrypt Your Files on Cloud			
+		</h4>
+
+		<div class="row justify-content-center">
+			<div class="col-10">
+				<textarea class="input" placeholder="Copy your text here, my lord." rows="10" id="inputText"></textarea>
+			</div>
+			
+		</div>
+		<div class="row justify-content-center">
+			<div class="input-group col-7">
+  				<input type="text" class="form-control input" placeholder="KEY (16 Characters)" id="key">
+  					<div class="input-group-append">
+    					<button class="btn btn-outline-secondary" type="button" id="button-addon"><i class="fas fa-redo"></i></button>
+  					</div>
+			</div>
+
+			<div class="btn-group btn-group-toggle col-3" data-toggle="buttons">
+			  	<label class="btn btn-customize active">
+			    	<input type="radio" name="options" id="option1" autocomplete="off" checked> Encryption
+			  	</label>
+			  	<label class="btn btn-customize">
+			    	<input type="radio" name="options" id="option2" autocomplete="off"> Decryption
+			  	</label>
+			  	
+			</div>			
+		</div>
+
+		<button class="btn btn-primary btn-lg" id="startBtn" type="button">
+  			<span class="spinner-grow spinner-grow-sm spinner" role="status" aria-hidden="true"></span>
+  			Start!
+		</button>
+
+		<div class="row justify-content-center">
+			<div class="col-10">
+				<textarea class="input" disabled rows="10" id="outputContent"></textarea>
+			</div>
+			
+		</div>
+		  
+
+		
+
+
+
+	</div>
+	
+	<script type="text/javascript", src="lib/app.js"></script>
+
+
+
+
+</body>
+</html>

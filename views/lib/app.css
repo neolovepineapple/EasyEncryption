@@ -1,0 +1,92 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+	font-weight: 500;
+	margin-top:60px;
+	margin-bottom: 15px
+}
+
+h4{
+	font-weight: 300;
+	margin-bottom: 60px;
+}
+
+.navbar-brand{
+	font-weight: 600;
+}
+
+.icon{
+	margin-right: 5px;
+	padding: 5px;
+	background-color: rgb(32,178,170);
+}
+
+.github{
+	font-size: 2rem;
+}
+
+
+.container{
+	text-align: center;
+}
+
+
+
+.input:focus{
+	background: #fff;
+	border: 3px solid rgb(32,178,170);
+	outline: none;
+	box-shadow: 0 0 0 0.01rem rgba(255,255,255,0);
+}
+
+.input{
+	border: 3px solid rgba(0,0,0,0);
+	background-color: #f7f7f7;
+	width: 100%;
+	font-size: 1.5rem;
+	margin-left: 0;
+}
+
+
+.btn-customize{
+	background-color: rgba(32,178,170, 0.3);
+	color: #2F4F4F;
+	font-size: 1.2rem;
+}
+
+.btn-customize:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: rgb(32,178,170);
+    border-color: rgb(32,178,200);
+    font-size: 1.2rem;
+}
+
+#button-addon{
+	border:none;
+	width:40px;
+}
+#button-addon:focus{
+	outline: none;
+	border:none;
+	box-shadow: 0 0 0 0.01rem rgba(255,255,255,0);
+}
+
+
+
+.spinner{
+
+	display: none;
+}
+
+#startBtn{
+	margin:30px;
+	width:20%;
+}
+
+
+
+
+
+
