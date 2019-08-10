@@ -1,11 +1,13 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var mongoose  = require('mongoose');
 //app.use(bodyParser());
 //app.use(express.bodyParser());
 
 app.use(bodyParser.json());                        
 
+mongoose.connect('mongodb://localhost/feedback');
     // parse application/x-www-form-urlencoded
 //app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -17,6 +19,15 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/views'));
 
 app.engine('html', require('ejs').renderFile);
+
+
+
+var feedbackSchema = new mongoose.Schema({
+	stars: Number
+	
+});
+
+var feedback = mongoose.model("feedback", feedbackSchema);
 
 
 
@@ -61,4 +72,22 @@ app.post("/sendData",function(req,res){
 		output = decrypt(req.body.textContent, req.body.key);
 	}
 	res.send(output);
+});
+
+
+
+app.post("/feedback",function(req,res){
+	feedback.create({stars: req.body.feedback},
+			   function(err, feed){
+	if(err){
+		console.log(err);
+	}else{
+		console.log(feed);
+	}
+		
+		
+});
+	res.send("ok");
+
+	
 });
